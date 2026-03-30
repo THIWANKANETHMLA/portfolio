@@ -117,7 +117,28 @@ h1{
     color: #00c3ff;
 }
 
+/* TITLE */
+.title{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
 
+    background: rgba(255,255,255,0.001);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(0,195,255,0.2);
+
+    margin-bottom: 40px;
+}
+
+.title h2{
+    color:dodgerblue;
+    font-size:28px;
+    font-weight: bold;
+
+    text-shadow: 0 0 10px rgba(0,195,255,0.6);
+}
 
 .role{
     color:#00c3ff;
