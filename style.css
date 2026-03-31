@@ -114,7 +114,9 @@ body{
 
 h1{
     font-size:42px;
-    color: #00c3ff;
+    background: linear-gradient(35deg, #00c3ff, #7c3aed);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /* TITLE */
@@ -133,11 +135,12 @@ h1{
 }
 
 .title h2{
-    color:dodgerblue;
-    font-size:28px;
-    font-weight: bold;
+    font-size:30px;
+    font-weight:bold;
 
-    text-shadow: 0 0 10px rgba(0,195,255,0.6);
+    background: linear-gradient(35deg, #00c3ff, #7c3aed);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .role{
@@ -283,6 +286,63 @@ button{
 .edu-card span{
     font-size:13px;
     color:#aaa;
+}
+
+/* WRAPPER */
+.skills-wrapper{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* GROUP TITLE */
+.skill-group h3{
+    text-align:center;
+    color:#00c3ff;
+    margin-bottom:15px;
+}
+
+/* GRID */
+.skills-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+.skill-card{
+    padding:20px;
+    border-radius:15px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+
+    text-align:center;
+    transition:0.3s;
+}
+
+/* ICON */
+.skill-card img{
+    width:50px;
+    margin-bottom:10px;
+}
+
+/* TEXT */
+.skill-card p{
+    color:#00c3ff;
+}
+
+/* HOVER */
+.skill-card:hover{
+    transform: translateY(-8px);
+    box-shadow:
+            0 0 15px deepskyblue,
+            0 0 30px blueviolet;
 }
 
 /* SCROLL */
