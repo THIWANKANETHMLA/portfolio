@@ -67,22 +67,6 @@ body{
     transition: 0.3s;
 }
 
-/* HOVER */
-.nav ul a::after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: dodgerblue;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.3s;
-}
-
-.nav ul a:hover::after{
-    width: 100%;
-}
 
 /* SECTION */
 .section{
@@ -350,28 +334,3 @@ html{
     scroll-behavior:smooth;
 }
 
-/* MOBILE */
-@media (max-width:768px){
-
-    .hero-container{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .about-container{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    h1{
-        font-size:28px;
-    }
-
-    .profile{
-        width:220px;
-    }
-
-    .about-image img{
-        width:220px;
-    }
-}
