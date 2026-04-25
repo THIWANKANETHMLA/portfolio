@@ -233,29 +233,39 @@ button{
     max-width: 1200px;
     margin: auto;
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     margin-top: 50px;
 }
 
 .edu-card{
     width: 300px;
-    height: 300px;
     padding: 30px;
     border-radius: 20px;
 
-
-    background: rgba(255,255,255,0.0005);
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border:1px solid rgba(255,255,255,0.1);
 
     box-shadow: 0 0 20px rgba(0,195,255,0.2);
     transition: 0.3s;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
 }
 
+.edu-card:nth-child(1){ animation-delay: 0.2s; }
+.edu-card:nth-child(2){ animation-delay: 0.4s; }
+.edu-card:nth-child(3){ animation-delay: 0.6s; }
+.edu-card:nth-child(4){ animation-delay: 0.8s; }
+
 .edu-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 40px rgba(0,195,255,0.5);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px rgba(0,195,255,0.6);
 }
+
 
 .edu-card h3{
     color:#00c3ff;
@@ -264,12 +274,60 @@ button{
 
 .edu-card p{
     color:#ddd;
-    margin-bottom:5px;
 }
 
-.edu-card span{
-    font-size:13px;
-    color:#aaa;
+.img-box{
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result-img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.img-box:hover .result-img{
+    transform: scale(1.1);
+}
+
+@keyframes fadeUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    padding-top: 50px;
+}
+
+.modal-content{
+    display: block;
+    margin: auto;
+    width: 60%;
+    transform: scale(0.5);
+    transition: 0.3s;
+}
+
+.modal.show .modal-content{
+    transform: scale(1);
+}
+
+#closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 /* WRAPPER */
@@ -432,6 +490,8 @@ button{
 
 
 
+
+
 /*CONTACT */
 .contact-container{
     display: flex;
@@ -501,7 +561,6 @@ button{
     transform: scale(1.05);
 }
 
-/* ===== ICONS ===== */
 .contact-info{
     display: flex;
     justify-content: center;
