@@ -228,106 +228,80 @@ button{
 }
 
 /* EDUCATION */
+/* EDUCATION */
 .edu-container{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
 .edu-card{
-    width: 300px;
-    padding: 30px;
-    border-radius: 20px;
+    width:260px;
+    min-height:260px;
+    padding:30px;
+    border-radius:20px;
 
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border:1px solid rgba(255,255,255,0.1);
 
-    box-shadow: 0 0 20px rgba(0,195,255,0.2);
-    transition: 0.3s;
+    box-shadow:0 0 20px rgba(0,195,255,0.3);
+    text-align:center;
+    transition:0.3s;
 
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 0.8s ease forwards;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
 }
-
-.edu-card:nth-child(1){ animation-delay: 0.2s; }
-.edu-card:nth-child(2){ animation-delay: 0.4s; }
-.edu-card:nth-child(3){ animation-delay: 0.6s; }
-.edu-card:nth-child(4){ animation-delay: 0.8s; }
 
 .edu-card:hover{
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 40px rgba(0,195,255,0.6);
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 0 20px deepskyblue, 0 0 35px blueviolet;
 }
 
-
-.edu-card h3{
+.edu-icon{
+    font-size:42px;
     color:#00c3ff;
     margin-bottom:10px;
 }
 
+.edu-card h3{
+    color:#00c3ff;
+    font-size:20px;
+}
+
 .edu-card p{
     color:#ddd;
+    font-size:14px;
 }
 
-.img-box{
-    margin-top: 15px;
-    border-radius: 10px;
-    overflow: hidden;
+.edu-btn{
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:20px;
+    color:white;
+    font-size:13px;
+    background:linear-gradient(45deg, #00c3ff, #7c3aed);
+    box-shadow:0 0 10px rgba(0,195,255,0.5);
+    transition:0.3s;
 }
 
-.result-img{
-    width: 100%;
-    cursor: pointer;
-    transition: 0.4s;
+.edu-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 18px #00c3ff;
 }
 
-.img-box:hover .result-img{
-    transform: scale(1.1);
-}
-
-@keyframes fadeUp{
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    padding-top: 50px;
-}
-
-.modal-content{
-    display: block;
-    margin: auto;
-    width: 60%;
-    transform: scale(0.5);
-    transition: 0.3s;
-}
-
-.modal.show .modal-content{
-    transform: scale(1);
-}
-
-#closeBtn{
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+.edu-links{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 /* WRAPPER */
@@ -611,5 +585,7 @@ button{
 html{
     scroll-behavior:smooth;
 }
+
+
 
 
