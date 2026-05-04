@@ -12,8 +12,8 @@ html{
 
 body{
     min-height:100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow-x:hidden;
+    overflow-y:auto;
     background: linear-gradient(135deg, #0f172a, #020617);
     color:white;
 }
@@ -94,13 +94,13 @@ body{
 
 /* SECTION */
 .section{
-    height:100vh;
+    min-height:100vh;
+    height:auto;
     display:flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items:center;
-    scroll-snap-align:start;
-    padding-top:80px;
+    padding:90px 20px 60px;
     background: url(image/bg.jpg) center/cover no-repeat;
 }
 
@@ -441,7 +441,6 @@ button:hover{
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -451,17 +450,15 @@ button:hover{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-
     background: rgba(20, 20, 60, 0.65);
     backdrop-filter: blur(20px);
-
     border: 1px solid rgba(0,195,255,0.25);
     box-shadow: 0 0 18px rgba(0,195,255,0.25);
-
     transition: 0.45s ease;
-
     opacity: 0;
     transform: translateY(50px);
+    display:flex;
+    flex-direction:column;
 }
 
 .project-card.show{
@@ -469,23 +466,28 @@ button:hover{
     transform: translateY(0);
 }
 
-/* IMAGE */
 .project-thumb{
-    height: 180px;
+    width:100%;
+    height: 170px;
     overflow: hidden;
+    background:#020617;
 }
 
 .project-thumb img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position:center;
+    display:block;
     filter: brightness(0.65);
     transition: 0.45s ease;
 }
 
-/* TEXT */
 .project-info{
     padding: 22px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
 }
 
 .project-info h4{
@@ -499,13 +501,16 @@ button:hover{
     font-size: 14px;
     color: #e6e6e6;
     margin-bottom: 18px;
+    line-height:1.5;
+    flex:1;
 }
 
-/* BUTTON */
 .visit-btn{
     display: inline-flex;
     align-items: center;
+    justify-content:center;
     gap: 8px;
+    width:max-content;
     padding: 9px 16px;
     border-radius: 22px;
     text-decoration: none;
@@ -522,7 +527,6 @@ button:hover{
     transform: scale(1.05);
 }
 
-/* GLOW ONLY (NO SHINE) */
 .project-card::before{
     content: "";
     position: absolute;
@@ -535,10 +539,8 @@ button:hover{
     transition: 0.4s;
 }
 
-/* HOVER */
 .project-card:hover{
     transform: translateY(-10px) scale(1.03);
-
     box-shadow:
             0 0 25px #00c3ff,
             0 0 55px #7c3aed,
@@ -639,10 +641,12 @@ button:hover{
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    width:100%;
 }
 
 .contact-form{
     width: 400px;
+    max-width:100%;
     padding: 30px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
@@ -798,197 +802,303 @@ button:hover{
     to{ transform: rotateY(0deg); }
 }
 
-/* PROJECT RESPONSIVE FIX */
-@media (max-width: 1024px) {
-    .projects-grid {
+/* =========================
+   RESPONSIVE FIX
+========================= */
+
+@media (max-width: 1024px){
+
+    .nav{
+        width:95%;
+        padding:8px 16px;
+    }
+
+    .nav ul{
+        gap:1rem;
+    }
+
+    .nav ul a{
+        font-size:14px;
+    }
+
+    .hero-container{
+        width:95%;
+        gap:30px;
+    }
+
+    .hero-name{
+        font-size:58px;
+    }
+
+    .profile{
+        width:280px;
+    }
+
+    .about-container{
+        width:95%;
+        gap:35px;
+    }
+
+    .about-image img{
+        width:300px;
+    }
+
+    .edu-container{
+        gap:25px;
+    }
+
+    .projects-grid{
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        gap:25px;
     }
-    .hero-name {
-        font-size: 60px;
-    }
-    .profile {
-        width: 280px;
+
+    .contact-form{
+        width:360px;
     }
 }
 
+@media (max-width: 768px){
 
-@media (max-width: 768px) {
-
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    .hero-name {
-        font-size: 48px;
-    }
-    .role {
-        font-size: 18px;
-    }
-    .profile {
-        width: 240px;
+    .section{
+        padding:130px 18px 70px;
     }
 
-    .about-container {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
-    }
-    .about-image img {
-        width: 280px;
-    }
-    .about-card {
-        padding: 25px;
-        width: 100%;
-    }
-    .about-info {
-        justify-content: center;
+    .nav{
+        width:94%;
+        flex-direction:column;
+        border-radius:28px;
+        padding:10px;
     }
 
-    .edu-card {
-        width: 280px;
+    .logo img{
+        width:35px;
     }
 
-    .gallery-wrapper {
-        gap: 80px;
-    }
-    .container {
-        width: 200px;
-        height: 130px;
-        transform: scale(0.9);
-    }
-    .carousel figure {
-        width: 180px;
-        height: 110px;
-        left: 10px;
+    .logo h2{
+        font-size:16px;
     }
 
-    .carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(240px); }
-    .carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(240px); }
-    .carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(240px); }
-    .carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(240px); }
-    .carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(240px); }
-    .carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(240px); }
-    .carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(240px); }
-    .carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(240px); }
-    .carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(240px); }
+    .nav ul{
+        margin-top:8px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .nav ul a{
+        font-size:13px;
+    }
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+        width:100%;
+    }
+
+    .hero-name{
+        font-size:42px;
+    }
+
+    .role{
+        font-size:17px;
+    }
+
+    .profile{
+        width:230px;
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+        width:100%;
+        gap:30px;
+    }
+
+    .about-image img{
+        width:260px;
+    }
+
+    .about-card{
+        width:100%;
+        padding:22px;
+    }
+
+    .about-info{
+        justify-content:center;
+    }
+
+    .edu-container{
+        width:100%;
+        gap:25px;
+    }
+
+    .edu-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .skills-wrapper{
+        width:100%;
+        gap:30px;
+    }
+
+    .skills-container{
+        gap:15px;
+    }
+
+    .skill-card{
+        width:120px;
+        padding:15px;
+    }
+
+    .projects-grid{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .project-card{
+        width:100%;
+        max-width:360px;
+        margin:auto;
+    }
+
+    .project-thumb{
+        height:165px;
+    }
+
+    .project-info{
+        padding:18px;
+    }
+
+    .project-info h4{
+        font-size:18px;
+    }
+
+    .project-info p{
+        font-size:13px;
+    }
+
+    .contact-form{
+        width:100%;
+        max-width:360px;
+    }
+
+    .contact-info{
+        gap:15px;
+    }
+
+    .contact-item{
+        width:105px;
+        padding:14px;
+    }
+
+    .gallery-wrapper{
+        gap:60px;
+        margin-top:30px;
+    }
+
+    .container{
+        width:160px;
+        height:110px;
+        transform:scale(0.85);
+    }
+
+    .carousel figure{
+        width:150px;
+        height:95px;
+        left:5px;
+    }
+
+    .carousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(180px); }
+    .carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(180px); }
+    .carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(180px); }
+    .carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(180px); }
+    .carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(180px); }
+    .carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(180px); }
+    .carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(180px); }
+    .carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(180px); }
+    .carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(180px); }
 }
 
+@media (max-width: 480px){
 
-@media (max-width: 600px) {
-    .section {
-        padding-top: 100px;
-        padding-bottom: 50px;
-    }
-    .nav {
-        flex-direction: column;
-        padding: 8px 12px;
-        width: 94%;
-        top: 8px;
-        border-radius: 40px;
-    }
-    .nav ul {
-        gap: 0.8rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 6px;
-    }
-    .nav ul a {
-        font-size: 13px;
-    }
-    .logo h2 {
-        font-size: 16px;
-    }
-    .hero-name {
-        font-size: 36px;
-    }
-    .role {
-        font-size: 16px;
-    }
-    button {
-        padding: 8px 18px;
-        font-size: 14px;
-    }
-    .title h2 {
-        font-size: 24px;
-    }
-    .about-card p {
-        font-size: 14px;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        width: 88%;
-        gap: 25px;
-    }
-    .project-card {
-        max-width: 360px;
-        margin: 0 auto;
-        width: 100%;
-    }
-    .project-thumb {
-        height: 160px;
-    }
-    .project-info {
-        padding: 18px;
-    }
-    .project-info h4 {
-        font-size: 18px;
-    }
-    .contact-form {
-        width: 90%;
-        padding: 20px;
-    }
-    .contact-item {
-        width: 100px;
-        padding: 12px;
-    }
-    .contact-item i {
-        font-size: 24px;
-    }
-    .contact-item span {
-        font-size: 12px;
-    }
-    .skill-card {
-        padding: 12px;
-    }
-    .skill-card img {
-        width: 40px;
+    .section{
+        padding:150px 14px 60px;
     }
 
-    .gallery-wrapper {
-        gap: 50px;
+    .nav ul{
+        gap:8px;
     }
-    .container {
-        width: 160px;
-        height: 110px;
-        transform: scale(0.8);
-    }
-    .carousel figure {
-        width: 150px;
-        height: 95px;
-        left: 5px;
-    }
-    .carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(180px); }
-    .carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(180px); }
-    .carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(180px); }
-    .carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(180px); }
-    .carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(180px); }
-    .carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(180px); }
-    .carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(180px); }
-    .carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(180px); }
-    .carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(180px); }
-}
 
-@media (max-width: 480px) {
-    .hero-name {
-        font-size: 32px;
+    .nav ul a{
+        font-size:12px;
     }
-    .profile {
-        width: 200px;
+
+    .hero-name{
+        font-size:32px;
     }
-    .edu-card {
-        width: 240px;
-        padding: 20px;
+
+    .profile{
+        width:200px;
+    }
+
+    .title{
+        margin-bottom:28px;
+    }
+
+    .title h2{
+        font-size:23px;
+    }
+
+    .about-card{
+        padding:18px;
+    }
+
+    .about-card p{
+        font-size:14px;
+    }
+
+    .about-info span{
+        font-size:12px;
+    }
+
+    .edu-card{
+        max-width:280px;
+        padding:22px;
+    }
+
+    .skill-card{
+        width:105px;
+        padding:12px;
+    }
+
+    .skill-card img{
+        width:38px;
+    }
+
+    .project-card{
+        max-width:320px;
+    }
+
+    .project-thumb{
+        height:150px;
+    }
+
+    .visit-btn{
+        font-size:12px;
+        padding:8px 14px;
+    }
+
+    .contact-item{
+        width:95px;
+    }
+
+    .contact-item i{
+        font-size:24px;
+    }
+
+    .contact-item span{
+        font-size:12px;
     }
 }
