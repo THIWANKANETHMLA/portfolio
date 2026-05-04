@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- NAV -->
+<!--NAVBAR-->
 <nav class="nav">
     <div class="logo">
         <img src="image/logo.png">
-        <h2>Thiwanka Nethmal </h2>
+        <h2>Thiwanka Nethmal</h2>
     </div>
 
     <ul>
@@ -23,24 +24,22 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#gallery">Gallery</a></li>
-
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-
-<!-- HERO -->
-<section class="section hero" id="home">
+<!-- hero Section-->
+ <section class="section hero" id="home">
     <div class="hero-container">
 
         <div class="left">
-            <h1>Hi, I'm Thiwanka <br>Nethmal</h1>
+            <h1 class="hero-name">
+                Hi, I'm <span>Thiwanka</span><br>
+                <span>Nethmal</span>
+            </h1>
+
             <p class="role">Software Engineer</p>
-
-
-                <button>Download CV</button>
-
+            <button>Download CV</button>
         </div>
-
 
         <div class="right">
             <div class="image-box">
@@ -51,45 +50,46 @@
     </div>
 </section>
 
-<!-- ABOUT -->
+<!--about me-->
 <section class="section" id="about">
-
     <div class="about-container">
 
         <div class="about-image">
             <img src="image/about.jpg" alt="About Image">
         </div>
 
-
         <div class="about-card">
-
             <h2>About Me</h2>
 
             <p>
-                I'm <b>Thiwanka Nethmal</b>, a passionate Software Engineering student at IJSE.
-                I enjoy building modern web applications and learning new technologies.
+                I'm <b>Thiwanka Nethmal</b>, a passionate Software Engineering student at IJSE,
+                currently living in <b>Bandaragama, Sri Lanka</b>.
+            </p>
+
+            <p>
+                My birthday is <b>10th April 2003</b>. I enjoy building modern web applications,
+                learning new technologies, and creating clean, user-friendly designs.
             </p>
 
             <p>
                 I have experience in <b>Java, HTML, CSS, and JavaScript</b>.
                 I’m currently focused on improving my full-stack development skills
-                and creating clean, user-friendly designs.
+                and becoming a professional software engineer.
             </p>
 
-            <!-- INFO TAGS -->
             <div class="about-info">
-                <span>📍 Sri Lanka</span>
+                <span>👤 Thiwanka Nethmal</span>
+                <span>🎂 10 April 2003</span>
+                <span>📍 Bandaragama</span>
                 <span>🎓 IJSE Student</span>
                 <span>💻 Full-Stack Learner</span>
             </div>
-
         </div>
 
     </div>
-
 </section>
 
-<!-- EDUCATION -->
+<!--education-->
 <section class="section" id="education">
     <div class="title">
         <h2>Education</h2>
@@ -132,16 +132,14 @@
     </div>
 </section>
 
-<!-- SKILLS -->
+<!--skill-->
 <section class="section" id="skills">
-
     <div class="title">
         <h2>My Skills</h2>
     </div>
 
     <div class="skills-wrapper">
 
-        <!-- FRONTEND -->
         <div class="skill-group">
             <h3>Frontend</h3>
 
@@ -163,7 +161,6 @@
             </div>
         </div>
 
-        <!-- BACKEND -->
         <div class="skill-group">
             <h3>Backend</h3>
 
@@ -180,7 +177,6 @@
             </div>
         </div>
 
-        <!-- TOOLS -->
         <div class="skill-group">
             <h3>Tools</h3>
 
@@ -199,34 +195,90 @@
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
                     <p>VS Code</p>
                 </div>
+
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg">
                     <p>Intellij IDEA</p>
                 </div>
             </div>
         </div>
 
     </div>
-
 </section>
 
-<!-- PROJECTS -->
+<!-- Project -->
 <section class="section" id="projects">
     <div class="title">
         <h2>Projects</h2>
     </div>
-    <div class="projects-container">
-        <div class="project-card">
-            <H4>Connect four game</H4>
-        </div>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
-    </div>
 
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <div class="project-thumb">
+                <img src="image/bg.jpg" alt="">
+            </div>
+
+            <div class="project-info">
+                <h4>Layered Architecture</h4>
+                <p>Grocery management system using layered architecture (DAO, Service, DTO).</p>
+
+                <a href="#" target="_blank" class="visit-btn">
+                    <i class="fab fa-github"></i> Visit
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-thumb">
+                <img src="image/bg.jpg" alt="">
+            </div>
+
+            <div class="project-info">
+                <h4>MVC Architecture</h4>
+                <p>JavaFX application using MVC pattern with clean UI structure.</p>
+
+                <a href="#" target="_blank" class="visit-btn">
+                    <i class="fab fa-github"></i> Visit
+                </a>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+            <div class="project-thumb">
+                <img src="image/bg.jpg" alt="">
+            </div>
+
+            <div class="project-info">
+                <h4>CLI Project</h4>
+                <p>Console-based Java application (first project experience).</p>
+
+                <a href="#" target="_blank" class="visit-btn">
+                    <i class="fab fa-github"></i> Visit
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-thumb">
+                <img src="image/bg.jpg" alt="">
+            </div>
+
+            <div class="project-info">
+                <h4>POS System</h4>
+                <p>Full POS system with customers, orders, stock & reports.</p>
+
+                <a href="#" target="_blank" class="visit-btn">
+                    <i class="fab fa-github"></i> Visit
+                </a>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<!-- GALLERY -->
+<!--gallery-->
 <section class="section" id="gallery">
     <div class="title">
         <h2>Gallery</h2>
@@ -255,18 +307,17 @@
                 <figure><img src="image/p12.jpeg"></figure>
                 <figure><img src="image/p13.jpeg"></figure>
                 <figure><img src="image/about.jpg"></figure>
-                <figure><img src=""></figure>
-                <figure><img src=""></figure>
-                <figure><img src=""></figure>
-                <figure><img src=""></figure>
+                <figure><img src="image/p1.jpeg"></figure>
+                <figure><img src="image/p2.jpeg"></figure>
+                <figure><img src="image/p3.jpeg"></figure>
+                <figure><img src="image/p4.jpeg"></figure>
             </div>
         </div>
 
     </div>
-
 </section>
 
-<!-- CONTACT -->
+<!-- contact-->
 <section class="section" id="contact">
     <div class="title">
         <h2>Contact</h2>
@@ -289,23 +340,26 @@
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
             </a>
+
             <a href="mailto:thiwankanethmal1@email.com" class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <span>Email</span>
             </a>
+
             <a href="tel:+94713727032" class="contact-item">
                 <i class="fas fa-phone"></i>
                 <span>Call</span>
             </a>
+
             <a href="https://wa.me/94723727032?text=Hello%20Thiwanka%20I%20want%20to%20contact%20you" target="_blank" class="contact-item">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-
         </div>
 
     </div>
 </section>
 
+<script src="js.js"></script>
 </body>
 </html>
