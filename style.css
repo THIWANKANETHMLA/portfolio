@@ -799,69 +799,196 @@ button:hover{
 }
 
 /* PROJECT RESPONSIVE FIX */
-@media (max-width: 1024px){
-    #projects{
-        height: auto;
-        min-height: 100vh;
-        padding-bottom: 80px;
-    }
-
-    .projects-grid{
+@media (max-width: 1024px) {
+    .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-
-    .project-thumb{
-        height: 170px;
+    .hero-name {
+        font-size: 60px;
     }
-
-    .project-info h4{
-        font-size: 19px;
-    }
-
-    .project-info p{
-        font-size: 13px;
+    .profile {
+        width: 280px;
     }
 }
 
-@media (max-width: 600px){
-    #projects{
-        height: auto;
-        min-height: 100vh;
-        padding-bottom: 60px;
-    }
 
-    .projects-grid{
-        width: 88%;
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
+@media (max-width: 768px) {
 
-    .project-card{
-        max-width: 360px;
-        width: 100%;
-        margin: auto;
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
-
-    .project-thumb{
-        height: 160px;
+    .hero-name {
+        font-size: 48px;
     }
-
-    .project-info{
-        padding: 18px;
-    }
-
-    .project-info h4{
+    .role {
         font-size: 18px;
     }
-
-    .project-info p{
-        font-size: 13px;
-        line-height: 1.5;
+    .profile {
+        width: 240px;
     }
 
-    .visit-btn{
-        padding: 8px 14px;
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .about-image img {
+        width: 280px;
+    }
+    .about-card {
+        padding: 25px;
+        width: 100%;
+    }
+    .about-info {
+        justify-content: center;
+    }
+
+    .edu-card {
+        width: 280px;
+    }
+
+    .gallery-wrapper {
+        gap: 80px;
+    }
+    .container {
+        width: 200px;
+        height: 130px;
+        transform: scale(0.9);
+    }
+    .carousel figure {
+        width: 180px;
+        height: 110px;
+        left: 10px;
+    }
+
+    .carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(240px); }
+    .carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(240px); }
+    .carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(240px); }
+    .carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(240px); }
+    .carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(240px); }
+    .carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(240px); }
+    .carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(240px); }
+    .carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(240px); }
+    .carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(240px); }
+}
+
+
+@media (max-width: 600px) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 8px 12px;
+        width: 94%;
+        top: 8px;
+        border-radius: 40px;
+    }
+    .nav ul {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 6px;
+    }
+    .nav ul a {
+        font-size: 13px;
+    }
+    .logo h2 {
+        font-size: 16px;
+    }
+    .hero-name {
+        font-size: 36px;
+    }
+    .role {
+        font-size: 16px;
+    }
+    button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+    .title h2 {
+        font-size: 24px;
+    }
+    .about-card p {
+        font-size: 14px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        width: 88%;
+        gap: 25px;
+    }
+    .project-card {
+        max-width: 360px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .project-thumb {
+        height: 160px;
+    }
+    .project-info {
+        padding: 18px;
+    }
+    .project-info h4 {
+        font-size: 18px;
+    }
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+    .contact-item {
+        width: 100px;
+        padding: 12px;
+    }
+    .contact-item i {
+        font-size: 24px;
+    }
+    .contact-item span {
         font-size: 12px;
+    }
+    .skill-card {
+        padding: 12px;
+    }
+    .skill-card img {
+        width: 40px;
+    }
+
+    .gallery-wrapper {
+        gap: 50px;
+    }
+    .container {
+        width: 160px;
+        height: 110px;
+        transform: scale(0.8);
+    }
+    .carousel figure {
+        width: 150px;
+        height: 95px;
+        left: 5px;
+    }
+    .carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(180px); }
+    .carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(180px); }
+    .carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(180px); }
+    .carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(180px); }
+    .carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(180px); }
+    .carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(180px); }
+    .carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(180px); }
+    .carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(180px); }
+    .carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(180px); }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 32px;
+    }
+    .profile {
+        width: 200px;
+    }
+    .edu-card {
+        width: 240px;
+        padding: 20px;
     }
 }
